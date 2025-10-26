@@ -1,0 +1,17 @@
+
+Remove-Item -Recurse -Force ".git"
+Remove-Item -Recurse -Force ".\spring-boot-back-end\.git"
+
+git init
+git branch -M main
+git add .
+git commit -m "Version 1.0.0"
+git remote add origin https://github.com/manishrnl/AirBnb-Full-Stack.git
+git push -u origin main --force
+
+
+
+
+
+#To kill task like port 8080 , tun following command in cmd as an administration
+for /f "tokens=5" %a in ('netstat -aon ^| findstr :8080 ^| findstr LISTENING') do taskkill /PID %a /F
