@@ -5,7 +5,7 @@ Remove-Item -Recurse -Force ".\spring-boot-back-end\.git"
 git init
 git branch -M main
 git add .
-git commit -m "Version 1.0.0"
+git commit -m "Version 1.0.2"
 git remote add origin https://github.com/manishrnl/AirBnb-Full-Stack.git
 git push -u origin main --force
 
