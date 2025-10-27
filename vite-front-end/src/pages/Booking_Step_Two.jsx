@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const Booking_Step_Two = () => {
     useEffect(() => {
-        document.title = "Booking Details - HotelBooking";
+        document.title = "Booking Details - Hotel Booking";
     }, []);
 
     const location = useLocation();
@@ -177,9 +177,9 @@ const Booking_Step_Two = () => {
             <div className="d-flex justify-content-center gap-3 mt-4 flex-wrap">
                 <button
                     className="btn btn-outline-secondary btn-lg"
-                    onClick={() => navigate("/")}
+                    onClick={() => navigate("/bookings")}
                 >
-                    Back to Home
+                    Back to Previous Page
                 </button>
                 <button
                     className="btn btn-primary btn-lg"

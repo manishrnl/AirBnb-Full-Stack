@@ -4,7 +4,7 @@ import aboutImage from "../assets/hotel-about.jpg"
 
 const About = () => {
     useEffect(() => {
-        document.title = "About Us - HotelBooking";
+        document.title = "About Us - Hotel Booking";
     }, []); // Empty dependency array means it runs once on mount
 
     return (

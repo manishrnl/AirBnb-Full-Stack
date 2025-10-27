@@ -11,7 +11,7 @@ export function withNavigation(Component) {
 
 class MyBooking extends Component {
     componentDidMount() {
-        document.title = "My Bookings - HotelBooking";
+        document.title = "My Bookings - Hotel Booking";
     }
     constructor(props) {
         super(props);

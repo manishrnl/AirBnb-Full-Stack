@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const Login = () => {
     useEffect(() => {
-        document.title = "Login - HotelBooking";
+        document.title = "Login - Hotel Booking";
     }, []); // Empty dependency array means it runs once on mount
 
     const [email, setEmail] = useState("");

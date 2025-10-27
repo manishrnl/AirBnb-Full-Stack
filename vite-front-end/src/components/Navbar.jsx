@@ -19,7 +19,13 @@ const Navbar = () => {
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
                 <div className="container-fluid">
-                    <Link className="navbar-brand fw-bold" to="/">Airbnb Clone</Link>
+                    <Link className="navbar-brand fw-bold d-flex align-items-center gap-2" to="/">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#007bff" viewBox="0 0 24 24" width="28" height="28">
+                            <path d="M21 11V9a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3v2a2 2 0 0 0 2 2v7h2v-7h10v7h2v-7a2 2 0 0 0 2-2ZM6 9V7h12v2H6Zm8 9h-4v-4h4v4Z"/>
+                        </svg>
+                        <span>Airbnb Clone</span>
+                    </Link>
+
                     <button
                         className="navbar-toggler"
                         type="button"

@@ -4,8 +4,11 @@ import React, {useEffect, useState} from "react";
 const ContactUs = () => {
 
     useEffect(() => {
-        document.title = "Contact Us - HotelBooking";
-    }, []); // Empty dependency array means it runs once on mount
+        document.title = "Contact Us - Hotel Booking";
+        // Scroll to top when page loads
+        window.scrollTo({top: 0, behavior: "smooth"});
+
+    }, []);
 
 
     const [formData, setFormData] = useState({
@@ -29,7 +32,6 @@ const ContactUs = () => {
         setSuccessMessage("Thank you! We will get back to you soon.");
         setFormData({name: "", email: "", subject: "", message: ""});
     };
-
 
 
     return (
@@ -123,10 +125,10 @@ const ContactUs = () => {
             {/* Map */}
             <div className="row mt-5">
                 <div className="col-12">
-                    <div className="border rounded shadow-sm" style={{ height: '300px' }}>
+                    <div className="border rounded shadow-sm" style={{height: '300px'}}>
                         <iframe
                             src="https://embed.mappls.com/place/CTD6RR?token=przotensqvzqyvqdoxuclfnuednuvkywfxmi&fullscreen=true&position=top-left&zoom=16&pitch=45"
-                            style={{ width: '100%', height: '100%', border: 0 }}
+                            style={{width: '100%', height: '100%', border: 0}}
                             allowFullScreen
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"

@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const Payments = () => {
     useEffect(() => {
-        document.title = "Payments - HotelBooking";
+        document.title = "Payments - Hotel Booking";
     }, []);
 
     const location = useLocation();

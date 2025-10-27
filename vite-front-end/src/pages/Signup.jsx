@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 const Signup = () => {
     useEffect(() => {
-        document.title = "Sign Up - HotelBooking";
+        document.title = "Sign Up - Hotel Booking";
     }, []); // Empty dependency array means it runs once on mount
 
 

@@ -8,7 +8,6 @@ import Services from "./pages/Services.jsx";
 import Login from "./pages/Login.jsx";
 import Signup from "./pages/Signup.jsx";
 import Offers from "./pages/Offers.jsx";
-import Rooms from "./pages/Rooms.jsx";
 import BookRooms from "./pages/BookRoms.jsx";
 import Booking_Step_Two from "./pages/Booking_Step_Two.jsx";
 import Payments from "./pages/Payments.jsx";
@@ -33,7 +32,7 @@ function App() {
                     <Route path="/bookings/details/payments" element={<Payments/>}/>
                     <Route path="/signup" element={<Signup/>}/>
                     <Route path="/offers" element={<Offers/>}/>
-                    <Route path="/rooms" element={<Rooms/>}/>
+
                     <Route path="/myBookings" element={<MyBookings/>}/>
                     <Route path="/logout" element={<Logout/>}/>
                 </Routes>

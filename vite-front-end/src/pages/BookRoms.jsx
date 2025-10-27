@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 const BookRooms = () => {
 
     useEffect(() => {
-        document.title = "Book Rooms - HotelBooking";
+        document.title = "Book Rooms - Hotel Booking";
     }, []); // Empty dependency array means it runs once on mount
 
 

@@ -1,48 +1,50 @@
-// src/pages/Home.jsx
-import React, {useEffect} from "react";
+import React, { useEffect, useRef } from "react";
 import CardContainer from "../components/CardContainer.jsx";
-import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Home = () => {
-    useEffect(() => {
-        document.title = "Home - HotelBooking";
-    }, []); // Empty dependency array means it runs once on mount
+    const location = useLocation();
+    const heroRef = useRef(null);
+    const roomRef = useRef(null);
 
+    useEffect(() => {
+        document.title = "Home - Hotel Booking";
+
+    }, []);
+    useEffect(() => {
+        const hash = location.hash;
+        if (hash === "#room-section" && roomRef.current) {
+            roomRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+        if (hash === "#hero-section" && roomRef.current) {
+            heroRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+
+    }, [location]);
     return (
         <div>
-            {/* Hero Section */}
             <section
+                id="hero-section"
+                ref={heroRef}
                 className="hero-section text-white text-center d-flex align-items-center"
                 style={{
-                     backgroundImage: 'url("https://tse1.mm.bing.net/th/id/OIP.FtudhIBH-HYhxMpS4TU-sAHaE8?pid=Apihttps://tse1.mm.bing.net/th/id/OIP.FtudhIBH-HYhxMpS4TU-sAHaE8?pid=Api")',
+                    backgroundImage:
+                        'url("https://tse1.mm.bing.net/th/id/OIP.FtudhIBH-HYhxMpS4TU-sAHaE8?pid=Api")',
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     height: "80vh",
-                    position: "relative"
+                    position: "relative",
                 }}
             >
-                <div className="container">
-                    <h1 className="display-4 fw-bold">Welcome to HotelBooking</h1>
+                <div className="container" style={{ position: "relative", zIndex: 2 }}>
+                    <h1 className="display-4 fw-bold">Welcome to Hotel Booking</h1>
                     <p className="lead mb-4">Luxury stays. Best prices. Instant booking.</p>
-                    <Link to="/rooms" className="btn btn-primary btn-lg">
-                        Book Now
-                    </Link>
                 </div>
-                <div
-                    className="overlay"
-                    style={{
-                        position: "absolute",
-                        top: 0,
-                        left: 0,
-                        right: 0,
-                        bottom: 0,
-                        backgroundColor: "rgba(0,0,0,0.5)"
-                    }}
-                ></div>
             </section>
 
-            {/* Rooms Cards */}
-            <CardContainer />
+            <section id="room-section" ref={roomRef} className="room-section">
+                <CardContainer />
+            </section>
         </div>
     );
 };

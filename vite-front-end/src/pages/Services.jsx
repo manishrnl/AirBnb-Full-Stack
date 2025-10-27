@@ -1,9 +1,11 @@
-import React, {Component, useEffect} from 'react';
+import React, {Component} from 'react';
 
 
 class Services extends Component {
     componentDidMount() {
-               document.title = "Services We Offers - HotelBooking";
+        document.title = "Services We Offers - Hotel Booking";
+        // Scroll to top when page loads
+        window.scrollTo({top: 0, behavior: "smooth"});
     }
 
     render() {
@@ -40,7 +42,8 @@ class Services extends Component {
                                         style={{width: "350px", height: "200px"}}
                                     />
                                     <h5 className="card-title">Desktop App Development</h5>
-                                    <p className="card-text">Custom desktop apps for Windows platforms.</p>
+                                    <p className="card-text">Custom desktop apps for Windows
+                                        platforms.</p>
                                 </div>
                             </div>
                         </div>

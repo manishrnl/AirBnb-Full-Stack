@@ -3,7 +3,7 @@ import React, {useEffect} from "react";
 const Logout = ({ show, onConfirm, onCancel }) => {
 
     useEffect(() => {
-        document.title = "Logout - HotelBooking";
+        document.title = "Logout - Hotel Booking";
     }, []); // Empty dependency array means it runs once on mount
 
     if (!show) return null; // Hide popup when not triggered

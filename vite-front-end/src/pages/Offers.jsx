@@ -25,7 +25,7 @@ const offersData = [
 const Offers = () => {
 
     useEffect(() => {
-        document.title = "Offers & Coupons - HotelBooking";
+        document.title = "Offers & Coupons - Hotel Booking";
     }, []); // Empty dependency array means it runs once on mount
 
 
